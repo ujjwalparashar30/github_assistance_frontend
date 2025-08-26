@@ -48,8 +48,8 @@ export default function AssessmentPage() {
       dispatch(updateProgress({ phase1Complete: true }));
       dispatch(setCurrentStep('resume'));
       
-      // Navigate to resume upload
-      router.push('/resume-upload');
+      // Navigate to resume upload - FIXED PATH
+      router.push('/assessment/upload');
     } catch (error) {
       console.error('Failed to submit answers:', error);
       // Handle error (show toast notification)

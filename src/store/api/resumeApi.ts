@@ -15,8 +15,7 @@ export const resumeApi = baseApi.injectEndpoints({
       query: (formData) => ({
         url: '/upload-resume',
         method: 'POST',
-        body: formData,
-        formData: true,
+        body: formData,   // ✅ browser will set multipart headers automatically
       }),
       invalidatesTags: ['Resume', 'Session'],
     }),
